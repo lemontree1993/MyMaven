@@ -18,7 +18,7 @@
 			<form class="form-horizontal templatemo-login-form-2" role="form" action="#" method="post">
 				<div class="row">
 					<div class="col-md-12">
-						<h1>系统登录</h1>
+						<h1>微信点菜系统登录</h1>
 					</div>
 				</div>
 				<div class="row">
