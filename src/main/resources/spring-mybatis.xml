@@ -20,13 +20,12 @@
         http://www.springframework.org/schema/cache
         http://www.springframework.org/schema/cache/spring-cache.xsd
         http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop.xsdd
+        http://www.springframework.org/schema/aop/spring-aop.xsd
         http://www.springframework.org/schema/util
         http://www.springframework.org/schema/util/spring-util.xsd">
 
         <!--对要进行注解修饰的包进行扫描-->
-        <context:component-scan base-package="com.lemontree.core"></context:component-scan>
-        <context:component-scan base-package="com.lemontree.web"></context:component-scan>
+        <context:component-scan base-package="com.lemontree.*"></context:component-scan>
         <!--配置文件注入-->
         <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
             <property name="locations">
@@ -35,9 +34,46 @@
                 </list>
             </property>
         </bean>
-        <bean id="myspring" class="com.lemontree.test.MySpring"
-              p:age="12"
-              p:sex="boy"
-              p:name="hello spring"
-        />
+
+        <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+            <!--设置基本属性，url，user，password-->
+            <property name="url" value="${jdbc.url}"></property>
+            <property name="password" value="${jdbc.password}"></property>
+            <property name="username" value="${jdbc.username}"></property>
+
+            <!--配置初始化大小，最大，最小-->
+            <property name="initialSize" value="${ds.initialSize}"></property>
+            <property name="maxActive" value="${ds.maxActive}"></property>
+            <property name="minIdle" value="${ds.minIdle}"></property>
+            <property name="maxIdle" value="${ds.maxIdle}"></property>
+            <property name="driver" value="${jdbc.driver}"></property>
+
+            <!--最长等待时间-->
+            <property name="maxWait" value="${ds.maxWait}"></property>
+            <!--配置多久进行一次检测，检测需要关闭的空闲连接，单位是毫秒-->
+            <property name="timeBetweenEvictionRunsMillis" value="${ds.timeBetweenEvictionRunsMillis}"></property>
+            <!--配置一个连接在池中最小生存的时间，单位是毫秒-->
+            <property name="minEvictableIdleTimeMillis" value="${ds.minEvictableIdleTimeMillis}"></property>
+
+        </bean>
+
+        <!--mybatis与spring的结合，不需要再进行mybatis的配置映射-->
+        <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+            <property name="dataSource" value="dataSource"/>
+            <property name="mapperLocations" value="classpath:com/lemontree/mapper/*.xml"></property>
+        </bean>
+
+        <!--dao与mapper进行映射-->
+        <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+            <property name="basePackage" value="com.lemontree.web.dao"/>
+            <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        </bean>
+        <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+            <property name="basePackage" value="com.lemontree.core.baseDao"/>
+            <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        </bean>
+
+        <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+            <property name="dataSource" ref="dataSource"/>
+        </bean>
 </beans>

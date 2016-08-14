@@ -3,7 +3,7 @@
 	<title>待办系统</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link href="bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
 			<form class="form-horizontal templatemo-login-form-2" role="form" action="#" method="post">
 				<div class="row">
 					<div class="col-md-12">
-						<h1>微信点菜系统登录</h1>
+						<h1>代办系统登录</h1>
 					</div>
 				</div>
 				<div class="row">
