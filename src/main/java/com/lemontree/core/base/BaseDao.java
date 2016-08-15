@@ -1,4 +1,4 @@
-package com.lemontree.core.baseDao;
+package com.lemontree.core.base;
 
 /**
  * Created by lemontree on 2016/8/9.

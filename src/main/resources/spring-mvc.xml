@@ -28,7 +28,15 @@
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"></property>
-        <property name="suffix" value=".jsp"></property>
+        <property name="suffix" value=".vm"></property>
+    </bean>
+
+    <!--配置velocity引擎-->
+    <bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+            <!--模板存放的位置-->
+        <property name="resourceLoaderPath" value="/WEB-INF/view/"/>
+        <!--velocity配置文件-->
+        <property name="configLocation" value="classpath:velocity.properties"/>
     </bean>
 
     <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
