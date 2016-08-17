@@ -3,12 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:contex="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation=" http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
     <!--自动扫描包-->
     <contex:component-scan base-package="com.lemontree.web.controller.*"/>
-
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
     <bean  id="mappingJackson2HttpMessageConverter"
            class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -28,15 +29,7 @@
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"></property>
-        <property name="suffix" value=".vm"></property>
-    </bean>
-
-    <!--配置velocity引擎-->
-    <bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-            <!--模板存放的位置-->
-        <property name="resourceLoaderPath" value="/WEB-INF/view/"/>
-        <!--velocity配置文件-->
-        <property name="configLocation" value="classpath:velocity.properties"/>
+        <property name="suffix" value=".jsp"></property>
     </bean>
 
     <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
