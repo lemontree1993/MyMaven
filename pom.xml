@@ -21,6 +21,8 @@
     <velocity.version>1.7</velocity.version>
     <velocity.tools.version>1.7</velocity.tools.version>
     <dbcp.version>1.4</dbcp.version>
+    <javaee.version>7.0</javaee.version>
+    <jstl.version>1.2</jstl.version>
   </properties>
 
 
@@ -31,6 +33,21 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <!--java eee 的包-->
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>${javaee.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>${jstl.version}</version>
+    </dependency>
+
+    <!--spring的包-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
