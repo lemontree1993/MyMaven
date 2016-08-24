@@ -15,7 +15,7 @@
     <base href="<%=basePath%>">
     <title>系统登录</title>
     <!-- Custom Theme files -->
-    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="<%=basePath%>/css/style.css" type="text/css">
     <!-- Custom Theme files -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--Google Fonts-->
@@ -46,4 +46,6 @@
 
 
 </body>
+<script>
+</script>
 </html>
