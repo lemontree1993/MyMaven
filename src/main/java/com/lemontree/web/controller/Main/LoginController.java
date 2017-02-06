@@ -1,4 +1,4 @@
-package com.lemontree.web.controller;
+package com.lemontree.web.controller.Main;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,12 +15,10 @@ public class LoginController {
 
     @RequestMapping("/login.htm")
     public String Login(HttpServletRequest request, HttpServletResponse response) {
-
         return "login";
     }
     @RequestMapping("/index.htm")
     public String index(HttpServletRequest request, HttpServletResponse response) {
-
         return "index";
     }
 

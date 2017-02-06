@@ -13,8 +13,21 @@
     <mvc:default-servlet-handler/>
     <!--自动扫描包-->
     <contex:component-scan base-package="com.lemontree.web.controller"/>
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/"></property>
         <property name="suffix" value=".jsp"></property>
+    </bean>-->
+    <!--velocity配置-->
+    <bean id="velocityConfig"
+          class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/WEB-INF/templates/"/>
+    </bean>
+    <bean id="vmViewResolver"
+          class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="cache" value="true"/>
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <property name="suffix" value=".vm"/>
+        <!--多ViewResolver配置-->
+        <property name="order" value="1"/>
     </bean>
 </beans>
