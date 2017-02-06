@@ -1,55 +1,40 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lemontree
-  Date: 2016/8/21
-  Time: 21:03
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
+<!DOCTYPE html>
 <html>
+
 <head>
-    <base href="<%=basePath%>">
-    <title>系统登录</title>
-    <!-- Custom Theme files -->
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
-    <!-- Custom Theme files -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="bootstrap/js/jquery-1.11.1.min.js"></script>
-    <!--Google Fonts-->
-    <link href='http://fonts.useso.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <!--Google Fonts-->
+    <title></title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="bootstrap/js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
 </head>
 <body>
-<div class="login">
-    <h2>WELCOME TO !</h2>
-    <div class="login-top">
-        <h1>LOGIN THE SYSTEM</h1>
-        <form>
-            <input type="text" value="User Id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Id';}">
-            <input type="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
-        </form>
-        <div class="forgot">
-            <a href="#">forgot Password</a>
-            <input type="submit" value="Login" >
+<div class="conner">
+    <div class="header">
+        <h1>Login</h1>
+    </div>
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <label class="form-label">用户名:</label>
+            <input type="text" class="form-control" />
         </div>
-    </div>
-    <div class="login-bottom">
-        <h3>New User &nbsp;<a href="#">Register</a>&nbsp Here</h3>
-    </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label class="form-label">密&nbsp;&nbsp;&nbsp;码:</label>
+            <input type="password" class="form-control"/>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <button class="btn btn-primary" id="loginBtn">登录</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class="forgetPwd">忘记密码?</a>
+        </div>
+    </form>
 </div>
-<div class="copyright">
-</div>
-
 
 </body>
-<script>
-    $(function () {
-        window.location.href = "/user/login.htm";
-    })
-</script>
+
 </html>

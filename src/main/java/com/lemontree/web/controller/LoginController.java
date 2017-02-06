@@ -15,8 +15,13 @@ public class LoginController {
 
     @RequestMapping("/login.htm")
     public String Login(HttpServletRequest request, HttpServletResponse response) {
-        System.out.println("1");
+
         return "login";
+    }
+    @RequestMapping("/index.htm")
+    public String index(HttpServletRequest request, HttpServletResponse response) {
+
+        return "index";
     }
 
 }
