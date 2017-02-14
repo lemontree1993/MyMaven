@@ -1,16 +1,36 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lemontree
-  Date: 2016/8/21
-  Time: 21:38
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>欢迎来到我的Maven</title>
+    <title>Welcome to me Web</title>
+    <link href="../../css/indexStyle.css" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <div class="header_top">
+                <a href="/user/index.htm" class="header_icon"></a>
+                <div class="header_nav">
+                    <ul>
+                        <li>
+                            <a href="/user/index.htm">首页</a>
+                        </li>
+                        <li>
+                            <a>入口</a>
+                        </li>
+                        <li>
+                            <a>有意见</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="login_or_reg">
 
+                </div>
+            </div>
+            <div class="header_bottom">
+
+            </div>
+        </div>
+        <div class="main-body"></div>
+        <div class="footer"></div>
+    </div>
 </body>
 </html>

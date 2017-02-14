@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,27 +13,28 @@
     <div class="header">
         <h1>Login</h1>
     </div>
-    <form class="form-inline" role="form">
-        <div class="form-group">
-            <label class="form-label">用户名:</label>
-            <input type="text" class="form-control" />
-        </div>
-        <br />
-        <br />
-        <div class="form-group">
-            <label class="form-label">密&nbsp;&nbsp;&nbsp;码:</label>
-            <input type="password" class="form-control"/>
-        </div>
-        <br />
-        <br />
-        <div class="form-group">
-            <button class="btn btn-primary" id="loginBtn">登录</button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="#" class="forgetPwd">忘记密码?</a>
-        </div>
-    </form>
+    <div class="md">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <label class="form-label">用户名:</label>
+                <input type="text" class="form-control" />
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+                <label class="form-label">密&nbsp;&nbsp;&nbsp;码:</label>
+                <input type="password" class="form-control"/>
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+                <button class="btn btn-primary" id="loginBtn">登录</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" class="forgetPwd">忘记密码?</a>
+            </div>
+        </form>
+    </div>
 </div>
 
 </body>
-
 </html>

@@ -2,6 +2,7 @@ package com.lemontree.web.controller.VelocityTemp;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
@@ -18,6 +19,7 @@ public class VelocityController extends AbstractController{
 
     @Override
     @RequestMapping("/vmview.htm")
+    @ResponseBody
     protected ModelAndView handleRequestInternal(HttpServletRequest httpServletRequest,
                                                  HttpServletResponse httpServletResponse) throws Exception {
         System.out.println("---------------------------enter VelocityController");
