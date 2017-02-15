@@ -1,21 +1,35 @@
 *{
     margin: 0px;
     padding:0px;
+    box-sizing: border-box;
+}
+body{
+    height: 2000px;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    float: left;
+    /*position: fixed;*/
 }
 .header_top{
     height: 50px;
-    width:100%;
-    background-color: #2b895a;
+    width: 1000px;
+    margin: 0 auto;
 }
 .header_icon{
-    margin-right: 90px;
+    margin-right: 490px;
     height: 50px;
     width: 116px;
-    background-image: url("../img/nice.jpg");
-    position: relative;
+    margin-top: 12px;
+    font-size: 24px;
+    /*background-image: url("../img/nice.jpg");*/
     display: inline-block;
     float: left;
-    z-index: 2;
+}
+.header_nav{
+    float: left;
 }
 .header_nav ul,li{
     margin-top: 5px;
@@ -29,4 +43,37 @@ a{
     color: white;
     text-decoration: none;
     cursor: pointer;
+}
+.header_nav .active a:hover{
+    /*border-bottom: solid 3px white;*/
+    color: indianred;
+}
+.login_or_reg{
+    float: right;
+}
+.login_or_reg div{
+    margin-left: 10px;
+    line-height: 50px;
+    background-color: black;
+    float: left;
+}
+.login_or_reg a{
+    margin: 5px;
+}
+.header_bottom{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 650px;
+    background-color: #00aced;
+    float: left;
+}
+.main-body{
+    width: 100%;
+    height: 500px;
+    background: orangered;
+    float: left;
+    position: relative;
+}
+.footer{
 }

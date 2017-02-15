@@ -19,7 +19,7 @@ public class LoginController {
     }
     @RequestMapping("/index.htm")
     public String index(HttpServletRequest request, HttpServletResponse response) {
-        return "index";
+        return "index_test";
     }
 
 }

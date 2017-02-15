@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Welcome to me Web</title>
+    <link href="../../css/indexStyle.css" rel="stylesheet">
+    <link href="../../bootstrap/css/bootstrap.min.css">
+    <script src="../../bootstrap/js/jquery-1.11.1.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header_top" id="1F">
+                <a href="/user/index.htm" class="header_icon">LEMONTREE</a>
+                <div class="header_nav">
+                    <ul>
+                        <li class="active">
+                            <a href="/user/index.htm">首页</a>
+                        </li>
+                        <li class="active">
+                            <a href="#" name="inter-room">入口</a>
+                        </li>
+                        <li class="active" name="suggestion">
+                            <a href="#">有意见</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="login_or_reg">
+                    <div>
+                        <a href="/user/login.htm">登录</a>
+                    </div>
+                    <div>
+                        <a href="#">注册</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+            </div>
+        </div>
+        <div class="main-body" id="inter-room">
+        </div>
+        <div class="footer" id="suggestion">
+        </div>
+
+    </div>
+</body>
+<script>
+    $(function(){
+
+    })
+</script>
+</html>
