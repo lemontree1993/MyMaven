@@ -3,19 +3,27 @@
     padding:0px;
     box-sizing: border-box;
 }
-body{
-    height: 2000px;
+a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.bg-all{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url("../img/all-bg.jpg");
+    z-index: -2;
 }
 .header{
     width: 100%;
-    height: 50px;
     background-color: black;
+    position: fixed;
     float: left;
-    /*position: fixed;*/
 }
 .header_top{
     height: 50px;
-    width: 1000px;
+    width: 1150px;
     margin: 0 auto;
 }
 .header_icon{
@@ -32,48 +40,228 @@ body{
     float: left;
 }
 .header_nav ul,li{
-    margin-top: 5px;
-    margin-right: 20px;
+    margin-top: 10px;
+    margin-right: 15px;
     display: inline-block;
     list-style: none;
     font-family: 微软雅黑;
-    font-size:24px ;
+    font-size:18px ;
 }
-a{
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
+
 .header_nav .active a:hover{
     /*border-bottom: solid 3px white;*/
     color: indianred;
 }
 .login_or_reg{
+    margin-left: 10px;
     float: right;
 }
 .login_or_reg div{
-    margin-left: 10px;
-    line-height: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+    line-height: 10px;
     background-color: black;
     float: left;
 }
 .login_or_reg a{
     margin: 5px;
 }
+.login_border {
+    padding-right: 5px;
+    border-right: solid 2px white;
+}
 .header_bottom{
-    position: absolute;
-    top: 50px;
     width: 100%;
-    height: 650px;
-    background-color: #00aced;
+    height: 920px;
+    background-image: url("../img/dr_bg.jpg");
+    /*background-color: #00aced;*/
     float: left;
 }
+.bottom_about_me{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    border: solid 3px yellow;
+    position: absolute;
+    top: 600px;
+    left: 500px;
+    font-size: 24px;
+    border-radius: 10px;
+    color: black;
+}
+.bottom_about_me a{
+    margin-left: 18px;
+    margin-top: 25px;
+}
+.bottom_about_me:hover{
+    width: 150px;
+    height: 50px;
+    background-color: yellow;
+    border: solid 3px black;
+    position: absolute;
+    top: 600px;
+    left: 500px;
+    font-size: 24px;
+    border-radius: 10px;
+}
+/**************************************          main body   *****************************************/
 .main-body{
     width: 100%;
-    height: 500px;
-    background: orangered;
+    height: 600px;
+    background: #f2f2f2;
     float: left;
-    position: relative;
 }
+.body-Container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+h4{
+    text-align: center;
+    font-family: 微软雅黑;
+    font-size: 46px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.row{
+    width: 1900px;
+    margin-bottom: 10px;
+    float: left;
+}
+.main-body .memory{
+    width: 270px;
+    height: 350px;
+    margin-left: 290px;
+    text-align: center;
+    float: left;
+}
+.memory-box{
+    width: 200px;
+    height: 300px;
+    box-shadow: 0px 0px 13px grey;
+    border-radius: 5px;
+}
+.memory-box:hover{
+    transition:all 0.6s;
+    transform: scale(1.04);
+}
+.memory-box img{
+    margin-top: 10px;
+}
+.memory h2{
+    font-size: 22px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+/*.memory-box:hover{
+    cursor: pointer;
+    background-color: yellow;
+    border-radius: 10px;
+}*/
+.memory-box:hover{
+    cursor: pointer;
+}
+p{
+    word-wrap: break-word;
+    line-height: 1.6em;
+}
+/**************************************        blog      **************************************/
+.about{
+    width: 100%;
+    height: 800px;
+    background: #1bac91;
+    float: left;
+}
+.about-me{
+    margin-left: 150px;
+    width: 300px;
+    text-align: center;
+    float: left;
+    border-radius: 10px;
+}
+.about-me:hover{
+    box-shadow: 0px 0px 35px black;
+    transition: all 0.6s;
+    transform: scale(1.01);
+}
+.radios{
+    width: 300px;
+    height: 150px;
+    /*background-color: #5e5e5e;*/
+    /*background-image: url("../img/title.jpg");*/
+    border-radius: 10px 10px 0px 0px;
+}
+.radios img{
+    width: 300px;
+    height: 150px;
+    display: inline-block;
+    border-radius: 10px 10px 0px 0px;
+}
+.write-time{
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #e06d5e;
+    color: white;
+    font-size: 20px;
+}
+.write-desc{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 20px;
+}
+.about-me:hover{
+    cursor:pointer;
+}
+
+/******************************************       about        **********************************************/
+.blog{
+    width: 100%;
+    height: 300px;
+    background: grey;
+    float: left;
+    /*opacity: 0;*/
+    background:rgba(245,222,179,0);
+    color: white;
+}
+.blog p{
+    text-align: center;
+    font-family: 微软雅黑;
+    word-wrap: break-word;
+    font-size: 22px;
+}
+/*************************************          contact         *************************************************/
+.contact{
+    width: 100%;
+    height: 500px;
+    background-color: #f36f36;
+    float: left;
+}
+.contact h4{
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+.contact p{
+    text-align: center;
+    font-size: 20px;
+}
+.contact_form{
+    margin-left: 600px;
+    text-align: center;
+    width: 600px;
+}
+/***********************************************       footer        *******************************************/
 .footer{
+    padding-top: 102px;
+    width: 100%;
+    height: 260px;
+    background: black;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    color: white;
 }

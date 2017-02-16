@@ -1,6 +1,7 @@
 body{
   padding: auto;
-  background-color:#20B2AA;
+  /*background-color:#20B2AA;*/
+  background-image: url("../img/bt_bg.jpg");
 }
 .conner{
   margin: 200px auto;
@@ -9,13 +10,13 @@ body{
   width: 600px;
   height: 400px;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 10px;
   background:rgba(245,222,179,0.5);
 }
 .header h1{
   margin: 20px auto;
   padding: 55px 50px;
-  font-family: "bodoni mt black";
+  font-family: 微软雅黑;
 }
 .forgetPwd{
   text-decoration: none;
