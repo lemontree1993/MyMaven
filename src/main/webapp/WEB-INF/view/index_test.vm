@@ -34,7 +34,7 @@
                         <a id="login">LOGIN</a>
                     </div>
                     <div>
-                        <a href="#">REGISTER</a>
+                        <a id="register">REGISTER</a>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,67 @@
                         <div class="col-sm-offset-4 col-lg-2">
                             <button type="submit" class="btn btn-primary" id="submit-btn">登录</button>
                         </div>
-                        <a href="#">找回密码</a>
+                       <p><a id="reg-now">立即注册</a> / <a id="">找回密码</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reg-bg-all">
+        <div class="reg">
+            <div class="close-login">
+                <img src="../../img/close.png">
+            </div>
+            <div class="reg-header">
+                <h4>
+                    <del>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</del>
+                    注册
+                    <del>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</del>
+                </h4>
+            </div>
+            <div class="reg-body">
+                <div class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="userName" class="col-sm-4 control-label">用户名:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="userName" placeholder="用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg_realName" class="col-sm-4 control-label">真实姓名:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="reg_realName" placeholder="真实姓名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-4 control-label">密码:</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control" id="password" placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="re_password" class="col-sm-4 control-label">密码确认:</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control" id="re_password" placeholder="密码确认">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg_phone" class="col-sm-4 control-label">手机号码:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="reg_phone" placeholder="手机号码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg_email" class="col-sm-4 control-label">邮箱:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="reg_email" placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-lg-2">
+                            <button type="submit" class="btn btn-primary" id="submit-btn">注册</button>
+                        </div>
+                        <p>已有账号，<a href="#" id="login-now">立马登录</a></p>
                     </div>
                 </div>
             </div>
@@ -198,13 +258,27 @@
 </body>
 <script>
     $(function(){
+        loginOrReg();
+    })
+    function loginOrReg(){
         $("#login").click(function(){
             $(".login-black").css("display","block");
         });
         $(".close-login").click(function(){
             $(".login-black").css("display","none");
+            $(".reg-bg-all").css("display","none");
         });
-    })
-
+        $("#register").click(function(){
+            $(".reg-bg-all").css("display","block");
+        });
+        $("#login-now").click(function () {
+            $(".reg-bg-all").css("display","none");
+            $(".login-black").css("display","block");
+        });
+        $("#reg-now").click(function(){
+            $(".login-black").css("display","none");
+            $(".reg-bg-all").css("display","block");
+        })
+    }
 </script>
 </html>

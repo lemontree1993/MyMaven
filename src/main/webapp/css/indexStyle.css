@@ -287,14 +287,18 @@ p{
     color: black;
 }
 .modal-middle{
-    margin-top: 50px;
+    margin-top: 80px;
     width: 500px;
     height: 200px;
     text-align: center;
 }
 .modal-middle a{
-    color: cadetblue;
-    margin-right: 100px;
+    color: cornflowerblue;
+}
+.modal-middle p{
+    display: inline-block;
+    margin-right: 90px;
+    margin-top: 8px;
 }
 #submit-btn{
     clear: both;
@@ -314,9 +318,37 @@ p{
 }
 
 /*********************************    注册框    ****************************************/
-
-
-
+.reg-bg-all{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background:rgba(0,0,0,0.5);
+    z-index: 2500;
+    display: none;
+}
+.reg{
+    width: 460px;
+    height: 600px;
+    background-color: white;
+    position: fixed;
+    top: 100px;
+    left: 750px;
+    border-radius: 10px;
+}
+.reg h4{
+    font-size: 41px;
+}
+.reg h4 del{
+    font-size: 20px;
+}
+.reg-body a{
+    color: #00aced;
+}
+.reg-body p{
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 10px;
+}
 
 
 
