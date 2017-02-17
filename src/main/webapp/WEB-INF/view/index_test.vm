@@ -89,28 +89,28 @@
                 </div>
                 <div class="about-me">
                     <div class="radios">
-                        <img src="../../img/title.jpg">
+                        <img src="../../img/blog_title3.png">
                     </div>
                     <div class="write-time">创建于: 2017-02-16 15:17</div>
                     <div class="write-desc">描述：略略颔首，微微皱眉</div>
                 </div>
                 <div class="about-me">
                     <div class="radios">
-                        <img src="../../img/title.jpg">
+                        <img src="../../img/blog_title.jpg">
                     </div>
                     <div class="write-time">创建于: 2017-02-16 15:17</div>
                     <div class="write-desc">描述：略略颔首，微微皱眉</div>
                 </div>
                 <div class="about-me">
                     <div class="radios">
-                        <img src="../../img/title.jpg">
+                        <img src="../../img/blog_title2.jpg">
                     </div>
                     <div class="write-time">创建于: 2017-02-16 15:17</div>
                     <div class="write-desc">描述：略略颔首，微微皱眉</div>
                 </div>
             </div>
         </div>
-        <div class="blog" id="Blog">
+        <div class="blog" id="blog">
             <div class="row">
                 <h4>个人简介</h4>
                 <p>

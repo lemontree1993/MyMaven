@@ -20,6 +20,7 @@ a{
     background-color: black;
     position: fixed;
     float: left;
+    z-index: 1000;
 }
 .header_top{
     height: 50px;
