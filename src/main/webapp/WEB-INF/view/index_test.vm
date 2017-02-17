@@ -31,7 +31,7 @@
                 </div>
                 <div class="login_or_reg">
                     <div class="login_border">
-                        <a href="/user/login.htm">LOGIN</a>
+                        <a id="login">LOGIN</a>
                     </div>
                     <div>
                         <a href="#">REGISTER</a>
@@ -166,10 +166,45 @@
     </div>
     <div class="bg-all">
     </div>
+    <div class="login-black">
+        <div class="modal-login">
+            <div class="close-login">
+                <img src="../../img/close.png">
+            </div>
+            <div class="modal-middle">
+                <div class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="userName" class="col-sm-4 control-label">用户名</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="userName" placeholder="用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-4 control-label">密码</label>
+                        <div class="col-sm-5">
+                            <input type="password" class="form-control" id="password" placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-lg-2">
+                            <button type="submit" class="btn btn-primary" id="submit-btn">登录</button>
+                        </div>
+                        <a href="#">找回密码</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     $(function(){
-
+        $("#login").click(function(){
+            $(".login-black").css("display","block");
+        });
+        $(".close-login").click(function(){
+            $(".login-black").css("display","none");
+        });
     })
+
 </script>
 </html>
