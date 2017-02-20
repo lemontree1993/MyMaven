@@ -34,7 +34,7 @@ function regUser(){
     $.ajax({
         type:"POST",
         url:"user/regUser.htm",
-        dataType:"json",
+        dataType:"JSON",
         data:{
             userName:regUserName,
             realName:regRealName,

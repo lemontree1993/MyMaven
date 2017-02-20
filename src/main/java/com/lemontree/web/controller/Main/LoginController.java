@@ -1,18 +1,25 @@
 package com.lemontree.web.controller.Main;
 
-import com.lemontree.web.model.UserModel;
-import net.sf.json.JSONObject;
+import javax.json.JsonObject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.log4j.Logger;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.json.JsonObject;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import com.lemontree.web.model.UserModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by lemontree on 2016/8/23.
@@ -27,15 +34,15 @@ public class LoginController {
         return "login";
     }
 
+
+    @RequestMapping(value = "/regUser.htm",method = RequestMethod.POST,produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    @RequestMapping(value = "/regUser.htm",method = RequestMethod.POST)
-    public JSONObject regUser(UserModel userModel, ModelMap map){
-        JSONObject data = null;
-        System.out.println(data.get("i"));
-        System.out.println(userModel);
-        map.put("code",200);
-        map.put("msg","0K");
-        data.put("data",data);
-        return data;
+    public JSONObject regUser(UserModel userModel,ModelMap map,HttpServletResponse response){
+        JSONObject json = new JSONObject();
+        List<String> list = new ArrayList<String>();
+        list.add("aa");
+        map.put("11","2");
+        json.put("sss",11);
+        return json;
     }
 }

@@ -9,6 +9,7 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <contex:annotation-config/>
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
     <!--自动扫描包-->
@@ -35,4 +36,46 @@
         <property name="suffix" value=".vm"/>
         <property name="contentType" value="text/html;charset=UTF-8"/>
     </bean>
+    <!--添加json转换器-->
+    <bean id="mappingJackson2HttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+    <bean
+        class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="mappingJackson2HttpMessageConverter"></ref>
+            </list>
+        </property>
+    </bean>
+    <!-- 防止ajax请求出现406错误 -->
+    <bean id="contentNegotiationManager"
+          class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <property name="favorPathExtension" value="false" />
+        <property name="favorParameter" value="false" />
+        <property name="ignoreAcceptHeader" value="false" />
+        <property name="mediaTypes">
+            <value>
+                atom=application/atom+xml
+                html=text/html
+                jsonp=application/javascript
+                json=application/json
+                *=*/*
+            </value>
+        </property>
+    </bean>
+    <!--use alibaba fastjson to auto convert object to json to view-->
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes" value="application/json"/>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 </beans>

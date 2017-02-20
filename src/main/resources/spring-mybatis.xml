@@ -25,15 +25,16 @@
         http://www.springframework.org/schema/util/spring-util.xsd">
 
         <!--对要进行注解修饰的包进行扫描-->
-        <context:component-scan base-package="com.lemontree.*"></context:component-scan>
+        <context:component-scan base-package="com.lemontree.*"/>
         <!--配置文件注入-->
-        <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
             <property name="locations">
                 <list>
                     <value>classpath*:jdbc.properties</value>
                 </list>
             </property>
-        </bean>
+        </bean>-->
+        <context:property-placeholder location="classpath*:jdbc.properties"/>
 
         <!--数据库源配置-->
       <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
