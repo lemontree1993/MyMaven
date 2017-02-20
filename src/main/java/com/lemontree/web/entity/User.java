@@ -9,7 +9,7 @@ public class User {
 
     private String password;
 
-    private String mail;
+    private String email;
 
     private String userPhotoUrl;
 
@@ -24,8 +24,6 @@ public class User {
     private String userState;
 
     private Integer loginCount;
-
-    private String isDelete;
 
     private Date regTime;
 
@@ -75,12 +73,12 @@ public class User {
         this.password = password == null ? null : password.trim();
     }
 
-    public String getMail() {
-        return mail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail == null ? null : mail.trim();
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUserPhotoUrl() {
@@ -137,14 +135,6 @@ public class User {
 
     public void setLoginCount(Integer loginCount) {
         this.loginCount = loginCount;
-    }
-
-    public String getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(String isDelete) {
-        this.isDelete = isDelete == null ? null : isDelete.trim();
     }
 
     public Date getRegTime() {

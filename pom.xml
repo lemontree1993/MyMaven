@@ -25,6 +25,7 @@
     <jackson.version>1.9.13</jackson.version>
     <velocity.version>1.7</velocity.version>
     <velocity-tools.version>2.0</velocity-tools.version>
+    <json-lib>2.4</json-lib>
   </properties>
 
 
@@ -162,6 +163,13 @@
       <groupId>org.apache.velocity</groupId>
       <artifactId>velocity-tools</artifactId>
       <version>${velocity-tools.version}</version>
+    </dependency>
+    <!--JSON-lib-->
+    <dependency>
+      <groupId>net.sf.json-lib</groupId>
+      <artifactId>json-lib</artifactId>
+      <version>${json-lib}</version>
+      <classifier>jdk15</classifier>
     </dependency>
   </dependencies>
   <build>

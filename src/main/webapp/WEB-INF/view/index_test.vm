@@ -1,11 +1,11 @@
 <html>
 <head>
     <title>Welcome to me Web</title>
-    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/indexStyle.css" rel="stylesheet">
-    <link href="../../bootstrap/css/bootstrap.min.css">
-    <script src="../../bootstrap/js/jquery-1.11.1.min.js"></script>
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/indexStyle.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css">
+    <script src="/bootstrap/js/jquery-1.11.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="myContainer">
@@ -187,6 +187,15 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-4 col-lg-2">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">记住
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-lg-2">
                             <button type="submit" class="btn btn-primary" id="submit-btn">登录</button>
                         </div>
                        <p><a id="reg-now">立即注册</a> / <a id="">找回密码</a></p>
@@ -210,9 +219,9 @@
             <div class="reg-body">
                 <div class="form-horizontal" role="form">
                     <div class="form-group">
-                        <label for="userName" class="col-sm-4 control-label">用户名:</label>
+                        <label for="reg_UserName" class="col-sm-4 control-label">用户名:</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" id="userName" placeholder="用户名">
+                            <input type="text" class="form-control" id="reg_userName" placeholder="用户名">
                         </div>
                     </div>
                     <div class="form-group">
@@ -220,6 +229,15 @@
                         <div class="col-sm-5">
                             <input type="text" class="form-control" id="reg_realName" placeholder="真实姓名">
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="col-sm-4 control-label">性别:</label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="gender" id="boy" value="男" checked>男
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="gender" id="girl" value="女">女
+                        </label>
                     </div>
                     <div class="form-group">
                         <label for="password" class="col-sm-4 control-label">密码:</label>
@@ -247,38 +265,14 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-4 col-lg-2">
-                            <button type="submit" class="btn btn-primary" id="submit-btn">注册</button>
+                            <button type="submit" class="btn btn-primary" id="submit-btn" onclick="regUser()">注册</button>
                         </div>
-                        <p>已有账号，<a href="#" id="login-now">立马登录</a></p>
+                        <p>已有账号，<a id="login-now">立马登录</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script>
-    $(function(){
-        loginOrReg();
-    })
-    function loginOrReg(){
-        $("#login").click(function(){
-            $(".login-black").css("display","block");
-        });
-        $(".close-login").click(function(){
-            $(".login-black").css("display","none");
-            $(".reg-bg-all").css("display","none");
-        });
-        $("#register").click(function(){
-            $(".reg-bg-all").css("display","block");
-        });
-        $("#login-now").click(function () {
-            $(".reg-bg-all").css("display","none");
-            $(".login-black").css("display","block");
-        });
-        $("#reg-now").click(function(){
-            $(".login-black").css("display","none");
-            $(".reg-bg-all").css("display","block");
-        })
-    }
-</script>
+<script src="/js/index/Index.js"></script>
 </html>

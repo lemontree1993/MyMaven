@@ -3,7 +3,7 @@
 <head>
 <title>$!page_title</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script src="/js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/bootstrap/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>

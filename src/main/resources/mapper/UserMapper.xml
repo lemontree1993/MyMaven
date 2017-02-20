@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lemontree.dao.UserMapper" >
+<mapper namespace="com.lemontree.web.dao.UserMapper" >
   <resultMap id="BaseResultMap" type="com.lemontree.web.entity.User" >
     <result column="id" property="id" jdbcType="VARCHAR" />
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
-    <result column="mail" property="mail" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="user_photo_url" property="userPhotoUrl" jdbcType="VARCHAR" />
     <result column="realname" property="realname" jdbcType="VARCHAR" />
     <result column="age" property="age" jdbcType="INTEGER" />
@@ -13,7 +13,6 @@
     <result column="phone" property="phone" jdbcType="VARCHAR" />
     <result column="user_state" property="userState" jdbcType="CHAR" />
     <result column="login_count" property="loginCount" jdbcType="INTEGER" />
-    <result column="is_delete" property="isDelete" jdbcType="CHAR" />
     <result column="reg_time" property="regTime" jdbcType="TIMESTAMP" />
     <result column="last_login_time" property="lastLoginTime" jdbcType="TIMESTAMP" />
     <result column="license_time" property="licenseTime" jdbcType="TIMESTAMP" />
@@ -31,7 +30,7 @@
     insert into user (id, username, password, 
       mail, user_photo_url, realname, 
       age, sex, phone, user_state, 
-      login_count, is_delete, reg_time, 
+      login_count, reg_time,
       last_login_time, license_time, create_time, 
       delete_time, update_time, temp1, 
       temp2, temp3, temp4, 
