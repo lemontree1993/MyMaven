@@ -1,6 +1,6 @@
-package com.lemontree.core.utils;
+package com.lemontree.common.utils;
 
-import com.lemontree.core.baseEnum.ResCode;
+import com.lemontree.common.baseEnum.ResCode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -69,4 +69,50 @@ public class AjaxResult {
     public void setModel(Map<String, Object> model) {
         this.model = model;
     }
+
+    /**
+     * 成功返回的状态
+     * @return
+     */
+    public static AjaxResult success(){
+        return new AjaxResult(ResCode.OK);
+    }
+
+    /**
+     * 成功返回的状态，自定义描述
+     * @param msg
+     * @return
+     */
+    public static AjaxResult success(String msg){
+        AjaxResult result = new AjaxResult(ResCode.OK);
+        result.setResMsg(msg);
+        return result;
+    }
+
+    /**
+     * 失败返回的状态
+     * @return
+     */
+    public static AjaxResult failuer(){
+        return new AjaxResult(ResCode.FAIL);
+    }
+
+    /**
+     * 失败返回的状态，自定义描述
+     * @param failMsg
+     * @return
+     */
+    public static AjaxResult failuer(String failMsg){
+        AjaxResult result = new AjaxResult(ResCode.FAIL);
+        result.setResMsg(failMsg);
+        return result;
+    }
+
+    public static AjaxResult failuer(Integer resCode,String failMsg){
+        AjaxResult result = new AjaxResult();
+        result.setResMsg(failMsg);
+        result.setResCode(resCode);
+        return result;
+    }
+
 }

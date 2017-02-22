@@ -1,10 +1,11 @@
-package com.lemontree.core.baseEnum;
+package com.lemontree.common.baseEnum;
 
 /**
  * Created by YLBG-YCY-1325 on 2017/2/18.
  */
 public enum ResCode {
     OK(200,"成功"),
+    FAIL(0,"失败"),
     SERVICE_ERROR(500,"服务器发送未知错误");
 
     private Integer retCode;

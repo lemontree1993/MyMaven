@@ -1,11 +1,13 @@
 package com.lemontree.web.model;
 
+import com.lemontree.common.utils.StringUtil;
+
 import java.util.Date;
 
 public class UserModel {
     private String id;
 
-    private String username;
+    private String userName;
 
     private String password;
 
@@ -13,7 +15,7 @@ public class UserModel {
 
     private String userPhotoUrl;
 
-    private String realname;
+    private String realName;
 
     private Integer age;
 
@@ -49,20 +51,28 @@ public class UserModel {
 
     private String temp6;
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id == null ? null : id.trim();
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
     }
 
     public String getPassword() {
@@ -87,14 +97,6 @@ public class UserModel {
 
     public void setUserPhotoUrl(String userPhotoUrl) {
         this.userPhotoUrl = userPhotoUrl == null ? null : userPhotoUrl.trim();
-    }
-
-    public String getRealname() {
-        return realname;
-    }
-
-    public void setRealname(String realname) {
-        this.realname = realname == null ? null : realname.trim();
     }
 
     public Integer getAge() {
@@ -231,5 +233,21 @@ public class UserModel {
 
     public void setTemp6(String temp6) {
         this.temp6 = temp6 == null ? null : temp6.trim();
+    }
+
+    /**
+     * 判断必填，后期如果加参数，则在方法里在添加改参数判断
+     * @return
+     */
+    public boolean isAllPut(){
+        if (StringUtil.isNotBlank(this.userName) &&
+                StringUtil.isNotBlank(this.realName)&&
+                StringUtil.isNotBlank(this.email)&&
+                StringUtil.isNotBlank((this.sex))&&
+                StringUtil.isNotBlank(this.password)&&
+                StringUtil.isNotBlank(this.phone)){
+            return true;
+        }
+        return false;
     }
 }

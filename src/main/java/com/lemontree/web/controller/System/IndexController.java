@@ -1,6 +1,5 @@
-package com.lemontree.web.controller.Main;
+package com.lemontree.web.controller.System;
 
-import org.apache.commons.logging.Log;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

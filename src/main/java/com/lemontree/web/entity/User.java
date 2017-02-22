@@ -5,7 +5,7 @@ import java.util.Date;
 public class User {
     private String id;
 
-    private String username;
+    private String userName;
 
     private String password;
 
@@ -13,7 +13,7 @@ public class User {
 
     private String userPhotoUrl;
 
-    private String realname;
+    private String realName;
 
     private Integer age;
 
@@ -49,20 +49,28 @@ public class User {
 
     private String temp6;
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id == null ? null : id.trim();
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
     }
 
     public String getPassword() {
@@ -88,15 +96,6 @@ public class User {
     public void setUserPhotoUrl(String userPhotoUrl) {
         this.userPhotoUrl = userPhotoUrl == null ? null : userPhotoUrl.trim();
     }
-
-    public String getRealname() {
-        return realname;
-    }
-
-    public void setRealname(String realname) {
-        this.realname = realname == null ? null : realname.trim();
-    }
-
     public Integer getAge() {
         return age;
     }

@@ -43,7 +43,6 @@ function regUser(){
             password:rePassword
         },
         success:function(data){
-            alert(data);
         },
         error: function (data) {
             alert("error"+data);

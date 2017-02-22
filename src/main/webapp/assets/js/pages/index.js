@@ -42,7 +42,7 @@ $(document).ready(function(){
 	  $(this).tab('show');
 	}); 
 	
-/*------- Main Calendar -------*/
+/*------- core Calendar -------*/
 
 	$('#external-events div.external-event').each(function() {
 

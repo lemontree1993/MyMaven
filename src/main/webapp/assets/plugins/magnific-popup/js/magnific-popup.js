@@ -3,7 +3,7 @@
 * Copyright (c) 2013 Dmitry Semenov; */
 ;(function($) {
 
-/*>>core*/
+/*>>common*/
 /**
  *
  * Magnific Popup Core JS file
@@ -815,7 +815,7 @@ MagnificPopup.prototype = {
 		return mfp.scrollbarSize;
 	}
 
-}; /* MagnificPopup core prototype end */
+}; /* MagnificPopup common prototype end */
 
 
 
@@ -976,7 +976,7 @@ console.log('Test #2:', performance.now() - start);
 */
 
 
-/*>>core*/
+/*>>common*/
 
 /*>>inline*/
 
