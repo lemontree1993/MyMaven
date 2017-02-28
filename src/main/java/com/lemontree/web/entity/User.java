@@ -3,7 +3,7 @@ package com.lemontree.web.entity;
 import java.util.Date;
 
 public class User {
-    private String id;
+    private int id;
 
     private String userName;
 
@@ -49,6 +49,14 @@ public class User {
 
     private String temp6;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getUserName() {
         return userName;
     }
@@ -63,14 +71,6 @@ public class User {
 
     public void setRealName(String realName) {
         this.realName = realName;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
     }
 
     public String getPassword() {

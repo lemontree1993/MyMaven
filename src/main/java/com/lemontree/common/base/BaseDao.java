@@ -9,5 +9,4 @@ import java.util.List;
 public interface BaseDao<T> extends Serializable {
     int insert(T record);
     int insertSelective(T record);
-    List<T> getByUserId(String userId);
 }

@@ -7,6 +7,7 @@ import com.lemontree.common.baseEnum.ResCode;
 import com.lemontree.common.exception.SysArgumentException;
 import com.lemontree.common.exception.SysRuntimeException;
 import com.lemontree.common.utils.AjaxResult;
+import com.lemontree.web.entity.User;
 import com.lemontree.web.service.system.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,11 +36,11 @@ public class LoginController {
 
 
     @RequestMapping(value = "/regUser.htm",method = RequestMethod.POST)
-    public @ResponseBody AjaxResult regUser(UserModel userModel){
+    public @ResponseBody AjaxResult regUser(User user){
         try {
-                userService.insertUsers(userModel);
-        }catch (SysRuntimeException e){
-            LOG.error("user/regUser.htm"+ResCode.SERVICE_ERROR.getDesc());
+            userService.insertUsers(user);
+        }catch (Exception e){
+            LOG.error("user/regUser.htm : "+e.getMessage());
             return AjaxResult.failuer(
                     ResCode.SERVICE_ERROR.getRetCode(),ResCode.SERVICE_ERROR.getDesc());
         }

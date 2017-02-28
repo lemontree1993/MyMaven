@@ -59,7 +59,7 @@
     <mvc:default-servlet-handler/>
     <!--自动扫描包-->
     <contex:component-scan base-package="com.lemontree.web.controller"/>
-    <contex:component-scan base-package="com.lemontree.web.serviceImpl.*"/>
+    <contex:component-scan base-package="com.lemontree.web.serviceImpl"/>
     <!--velocity配置-->
     <bean id="velocityConfig"
           class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
