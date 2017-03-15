@@ -1,5 +1,6 @@
 package com.lemontree.web.controller.System;
 
+import com.lemontree.web.controller.BaseController;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,10 +14,15 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Controller
 @RequestMapping("/index.htm")
-public class IndexController {
-        Logger LOG = Logger.getLogger(IndexController.class);
+public class IndexController extends BaseController{
 
-        @RequestMapping(method = RequestMethod.GET)
+    /**
+     * 主页面跳转
+     * @param request 请求头
+     * @param response 响应头
+     * @return 页面地址
+     */
+    @RequestMapping(method = RequestMethod.GET)
         public String gotoIndex(HttpServletRequest request,
                                 HttpServletResponse response){
             return "index_test";
